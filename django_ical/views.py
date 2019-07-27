@@ -131,6 +131,9 @@ class ICalFeed(Feed):
 
     def item_timestamp(self, obj):
         return datetime.now()
+    
+    def get_object(self, request, *args, **kwargs):
+        return request
 
     def item_extra_kwargs(self, obj):
         kwargs = {}
